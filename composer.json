@@ -1,0 +1,14 @@
+{
+    "name": "user/shopp",
+    "description": "eccormerce web",
+    "type": "project",
+    "require": {
+         "phpmailer/phpmailer": "^7.0"
+    },
+    "authors": [
+        {
+            "name": "jose nganga"
+        }
+    ],
+    "minimum-stability": "stable"
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOEMAKEIT - Professional Help Center</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <!-- Header Section -->
+ <section id="header">
+        
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="logo-text">JOE<span>MAKEIT</span></div>
+                </div>
+      <div>
+        <ul id="navbar">
+          <li ><a href="INDEX.php">Home</a></li>
+          <li><a href="HOP.php">Shop</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a class="active" href="Contact.html">Help Center</a></li>
+          <li id="bag"><a href="CART.php"><i class="fa fa-shopping-cart cart"></i>
+           <span id="cart-count">0</span>
+          </a></li>
+          <a  id="clese" href="#"> <i class=" fa fa-times"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.php"><i class="fa fa-shopping-cart cart"></i><span id="cart-count-mobile">0</span></a>
+        <i id="bar" class="fas fa-outdent"> </i>
+
+      </div>
+      </section>
+  
+  <!-- Page Header -->
+  <section id="page-header" class="about-header">
+    <h2>Help Center</h2>
+    <p>We're here to assist you 24/7 with any questions or concerns</p>
+  </section>
+  
+  <!-- Help Tab Content -->
+  <section class="section-p1">
+    <div class="help-container">
+      <!-- Help Sidebar -->
+      <div class="help-sidebar">
+        <h2>Help Topics</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 10px 0; border-bottom: 1px solid #e1e1e1;">
+            <a href="#" data-tab="chat" style="text-decoration: none; color: linear-gradient(90deg, #764ba2 0%, #667eea 100%); font-weight: 500;">
+              <i class="fas fa-comments" style="margin-right: 10px;"></i> Live Chat Support
+            </a>
+          </li>
+          <li style="padding: 10px 0; border-bottom: 1px solid #e1e1e1;">
+  <a href="#" data-tab="branches" style="text-decoration: none; color: linear-gradient(90deg, #764ba2 0%, #667eea 100%); font-weight: 500;">
+    <i class="fas fa-map-pin" style="margin-right: 10px;"></i> Store Location
+  </a>
+</li>
+          <li style="padding: 10px 0; border-bottom: 1px solid #e1e1e1;">
+            <a href="#" data-tab="faq" style="text-decoration: none; color: linear-gradient(90deg, #764ba2 0%, #667eea 100%); font-weight: 500;">
+              <i class="fas fa-question-circle" style="margin-right: 10px;"></i> FAQs
+            </a>
+          </li>
+                  </ul>
+        
+        <div class="admin-status">
+          <span>Admin Status:</span>
+          <div class="status-dot" id="admin-status-dot"></div>
+          <span id="admin-status-text">Checking...</span>
+        </div>
+      </div>
+      
+      <!-- Main Help Content -->
+      <div class="help-content">
+        <div class="help-tabs">
+          <button class="tab-btn active" data-tab="chat">Live Chat</button>
+          <button class="tab-btn" data-tab="branches">Store Locator</button>
+          <button class="tab-btn" data-tab="faq">FAQs</button>
+        </div>
+        
+        <!-- Live Chat Tab -->
+        <div id="chat-tab" class="tab-content active">
+          <div class="chat-container">
+            <div class="chat-header">
+              <span>Live Chat Support</span>
+              <div class="status-indicator">
+                <div class="status-dot" id="chat-status-dot"></div>
+                <span id="status-indicator">Checking...</span>
+              </div>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+              <div class="message support">
+                <div class="message-content">
+                  Hello! Welcome to JOEMAKEIT support. How can I assist you today?
+                </div>
+                <div class="message-time">Just now</div>
+              </div>
+            </div>
+            <div class="chat-input">
+              <input type="text" id="chat-input" placeholder="Type your message...">
+              <button id="send-btn">Send</button>
+            </div>
+          </div>
+          <div id="chat-notice" class="status-notification status-connecting">
+            I'll be back soon...
+          </div>
+        </div>
+        
+        <!-- Store Locator Tab -->
+       <!-- Store Locator Tab -->
+<!-- Store Locator Tab -->
+<div id="branches-tab" class="tab-content">
+  <div class="map-container">
+    <div id="branch-map"></div>
+    <div class="map-overlay">
+      <button class="zoom-btn zoom-in"><i class="fas fa-plus"></i></button>
+      <button class="zoom-btn zoom-out"><i class="fas fa-minus"></i></button>
+    </div>
+  </div>
+  <div class="branch-info">
+    <h3>Visit Us</h3>
+    <div class="info-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Thika Road, Street 32, Kahawa West</span>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-clock"></i>
+      <span>Monday To Saturday: 8:00am to 5:00pm</span>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-phone"></i>
+      <span>+254104003130</span>
+    </div>
+    <button class="get-directions-btn">
+      <i class="fas fa-route"></i> Get Directions
+    </button>
+  </div>
+</div> 
+        <!-- FAQ Tab -->
+        <div id="faq-tab" class="tab-content">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <div class="faq-question">
+              How can I track my order?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Once your order has shipped, you'll receive a tracking number via email. You can use this tracking number on our website's order tracking page to see the current status and location of your package.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              What is your return policy?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We offer a 30-day return policy for most items. Items must be in their original condition with tags attached. To initiate a return, please visit our Returns Center in your account dashboard.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              How do I change or cancel my order?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>If your order hasn't shipped yet, you can make changes or cancel it by contacting our customer support team through live chat or by phone. For orders that have already shipped, you'll need to wait until you receive the items and then initiate a return if needed.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              What payment methods do you accept?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We accept M-Pesa,bank transfers. All payments are processed securely through our encrypted payment gateway.</p>
+            </div>
+          </div>
+        </div>
+        
+        
+  </section>
+  
+<!-- Footer -->
+    <div class="footer-wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>JOEMAKEIT</h3>
+                    <p>Your one-stop shop for quality products at affordable prices. We're committed to providing the best shopping experience.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/JoseFontez" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                     </div>
+                
+                <div id="quick-links" class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="HOP.php"><i class="fas fa-chevron-right"></i> Shop</a></li>
+                        <li><a href="Contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div id="customer-support" class="footer-col">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Shipping Policy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Returns & Exchanges</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Order Tracking</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contact Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Thika Road, Street 32, Kahawa West</p>
+                    <p><i class="fas fa-phone"></i> +254 104 003 130</p>
+                    <p><i class="fas fa-envelope"></i> contact@joemakeit.com</p>
+                    <h4>Payment Methods</h4>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+<p>&copy; <?= date('Y') ?>  2025 JOEMAKEIT. All rights reserved.</p>            </div>
+        </div>
+    </footer>
+  
+  <!-- Floating Chat Button -->
+  <div class="chat-button">
+    <i class="fas fa-comments"></i>
+  </div>
+  
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
