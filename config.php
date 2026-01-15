@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "Joseph@254";
+$password = 
 $dbname = "eccormerce";
 
 try {
@@ -38,7 +38,7 @@ function sendEmail($to, $subject, $body, $alt_body = null) {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'josephngangamunyui@gmail.com';
-        $mail->Password = 'kplgvupmvblovght'; // Ensure this is a valid Gmail App Password
+        $mail->Password = ''; // Ensure this is a valid Gmail App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
@@ -70,4 +70,5 @@ function sendEmail($to, $subject, $body, $alt_body = null) {
 function generateToken($length = 32) {
     return bin2hex(random_bytes($length));
 }
+
 ?>
